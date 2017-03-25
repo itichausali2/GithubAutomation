@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name= "Automation">
-<test name = "FirefoxTest">
-<classes>
-<class name ="GitTest">
-<methods>
-	<include name = "signin"/>
-	<include name = "login"/>
-	<include name="repositoryselection"/>
-	<include name= "clonedownload"/>
-</methods>
-</class>
-</classes>
-</test>
+<suite name="Automation">
+	<test name="FirefoxTest">
+		<classes>
+			<class name="GitTest">
+				<methods>
+					<include name="signin" />
+					<include name="login" />
+					<include name="repositoryselection" />
+					<include name="clonedownload" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 </suite>
