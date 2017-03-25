@@ -5,7 +5,6 @@
     <classes>
       <class name="GitTest">
         <methods>
-          <include name="repositoryselection"/>
           <include name="clonedownload"/>
           <include name="launchBtrowser"/>
         </methods>

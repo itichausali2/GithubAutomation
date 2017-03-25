@@ -13,7 +13,7 @@ public class GitTest {
 	WebDriver driver;
 	@BeforeTest
 	public void launchBtrowser() {
-		System.setProperty("webdriver.gecko.driver", "D://Workspace//GitAutomation//Drivers//geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "D://GithubAutomation//Drivers//chromedriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("https://github.com/");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -43,10 +43,12 @@ public class GitTest {
 	JavascriptExecutor js = (JavascriptExecutor)driver;
 	js.executeScript("Window.scrollBy, (0,500)","");
 	
-		WebElement repositoty = driver.findElement(By.xpath(".//a//span[text()='FlipkartAutomation']"));
+		WebElement repositoty = driver.findElement(By.xpath(".//a//span[text()='GithubAutomation']"));
 		repositoty.click();
-		boolean show = driver.findElement(By.xpath("..//button[@type='button' and contains(@title, 'Clone or download this repository')]")).isDisplayed();
-		Assert.assertTrue(show);
+		WebElement element = driver.findElement(By.xpath(".//button[contains(@title, 'Clone or download this repository')]"));
+		element.click();
+		driver.findElement(By.linkText("Open in Desktop")).click();
+		//Assert.assertTrue(show);
 	}
 	@Test(priority=4)
 	public void clonedownload() {
