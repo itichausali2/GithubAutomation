@@ -38,7 +38,6 @@ public class GitTest {
 		password.sendKeys("papa@123456");
 		driver.findElement(By.xpath(".//input [@value= 'Sign in']")).click();
 		boolean button = driver.findElement(By.linkText("Read the guide")).isDisplayed();
-		
 		Assert.assertTrue(button);
 	}
 
