@@ -1,4 +1,5 @@
 
 public class F2_f3 {
-	int var = 0;
+	String var = "iti";
+	int var =0;
 }
